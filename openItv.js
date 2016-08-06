@@ -151,7 +151,7 @@ function getApiSchedule(target,platform){
   return p;
 }
 
-/* Get Mercury lastweek */
+/* Get Mercury last week */
 function getApiLastweek(target,platform){
   var p = '/api/{target}/{platform}/lastweek';
   p = p.replace('{target}',target);

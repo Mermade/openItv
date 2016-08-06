@@ -63,6 +63,7 @@
 	"paths" : {
 		"/api/{target}/{platform}/Episode/Programme/{programmeId}" : {
 			"get" : {
+				"summary" : "Get Mercury programme details",
 				"description" : "Get Mercury programme details",
 				"operationId" : "Get_Mercury programme details_",
 				"produces" : [
@@ -99,6 +100,7 @@
 		},
 		"/api/{target}/{platform}/Episode/ByDate/{year}/{month}/{day}" : {
 			"get" : {
+				"summary" : "Get Mercury Episode by Date",
 				"description" : "Get Mercury Episode by Date",
 				"operationId" : "Get_Mercury Episode by Date_",
 				"produces" : [
@@ -150,6 +152,7 @@
 		},
 		"/api/{target}/{platform}/programme/perchannel/AD/{channelName}/{resultCount}" : {
 			"get" : {
+				"summary" : "Get Mercury audio-described (limited)",
 				"description" : "Get Mercury audio-described (limited)",
 				"operationId" : "Get_Mercury audio-described (limited)_",
 				"produces" : [
@@ -193,6 +196,7 @@
 		},
 		"/api/{target}/{platform}/Programme/Search/{searchTerm}" : {
 			"get" : {
+				"summary" : "Get Mercury search",
 				"description" : "Get Mercury search",
 				"operationId" : "Get_Mercury search_",
 				"produces" : [
@@ -229,6 +233,7 @@
 		},
 		"/api/{target}/{platform}/Episode/MostWatched" : {
 			"get" : {
+				"summary" : "Get Mercury most-watched",
 				"description" : "Get Mercury most-watched",
 				"operationId" : "Get_Mercury most-watched_",
 				"produces" : [
@@ -258,7 +263,7 @@
 		},
 		"/api/{target}/{platform}/Programme/PerChannel/{channelName}" : {
 			"get" : {
-				"description" : "Get Mercury per channel",
+				"summary" : "Get Mercury per channel",
 				"operationId" : "Get_Mercury per channel_",
 				"produces" : [
 					"application/json"
@@ -293,6 +298,7 @@
 		},
 		"/api/{target}/{platform}/Episode/index/{episodeId}" : {
 			"get" : {
+				"summary" : "Get Mercury episode index",
 				"description" : "Get Mercury episode index",
 				"operationId" : "Get_Mercury episode index_",
 				"produces" : [
@@ -328,6 +334,7 @@
 		},
 		"/api/{target}/{platform}/whatsonschedule/today" : {
 			"get" : {
+				"summary" : "Get Mercury schedule today",
 				"description" : "Get Mercury schedule today",
 				"operationId" : "Get_Mercury schedule today_",
 				"produces" : [
@@ -357,6 +364,7 @@
 		},
 		"/api/{target}/{platform}/programme/perchannel/AD/{channelName}" : {
 			"get" : {
+				"summary" : "Get Mercury audio-described",
 				"description" : "Get Mercury audio-described",
 				"operationId" : "Get_Mercury audio-described_",
 				"produces" : [
@@ -392,6 +400,7 @@
 		},
 		"/errorlog.aspx/digestrss" : {
 			"get" : {
+				"summary" : "Get Mercury error log digest",
 				"description" : "Get Mercury error log digest",
 				"operationId" : "Get_Mercury error log digest_",
 				"produces" : [
@@ -408,6 +417,7 @@
 		},
 		"/api/{target}/{platform}/episode/programme/{episodeId}" : {
 			"get" : {
+				"summary" : "Get Mercury episode/programme",
 				"description" : "Get Mercury episode/programme",
 				"operationId" : "Get_Mercury episode/programme_",
 				"produces" : [
@@ -443,6 +453,7 @@
 		},
 		"/api/{target}/postcode/{postcode}" : {
 			"get" : {
+				"summary" : "Get Mercury Postcode",
 				"description" : "Get Mercury Postcode",
 				"operationId" : "Get_Mercury Postcode_",
 				"produces" : [
@@ -475,6 +486,7 @@
 		},
 		"/api/{target}/{platform}/whatsonschedule/{date}" : {
 			"get" : {
+				"summary" : "Get Mercury schedule by date",
 				"description" : "Get Mercury schedule by date",
 				"operationId" : "Get_Mercury schedule by date_",
 				"produces" : [
@@ -510,6 +522,7 @@
 		},
 		"/errorlog.aspx/download" : {
 			"get" : {
+				"summary" : "Get Mercury error log download",
 				"description" : "Get Mercury error log download",
 				"operationId" : "Get_Mercury error log download_",
 				"produces" : [
@@ -526,6 +539,7 @@
 		},
 		"/api/{target}/{platform}/programme/index/{programmeId}" : {
 			"get" : {
+				"summary" : "Get Mercury programme index",
 				"description" : "Get Mercury programme index",
 				"operationId" : "Get_Mercury programme index_",
 				"produces" : [
@@ -561,6 +575,7 @@
 		},
 		"/api/{target}/{platform}/Episode/Crucial" : {
 			"get" : {
+				"summary" : "Get Mercury crucial",
 				"description" : "Get Mercury crucial",
 				"operationId" : "Get_Mercury crucial_",
 				"produces" : [
@@ -590,6 +605,7 @@
 		},
 		"/api/{target}/{platform}/whatsonschedule/yesterday" : {
 			"get" : {
+				"summary" : "Get Mercury schedule yesterday",
 				"description" : "Get Mercury schedule yesterday",
 				"operationId" : "Get_Mercury schedule yesterday_",
 				"produces" : [
@@ -619,6 +635,7 @@
 		},
 		"/errorlog.aspx/rss" : {
 			"get" : {
+				"summary" : "Get Mercury error log",
 				"description" : "Get Mercury error log",
 				"operationId" : "Get_Mercury error log_",
 				"produces" : [
@@ -635,6 +652,7 @@
 		},
 		"/api/{target}/{platform}/schedule" : {
 			"get" : {
+				"summary" : "Get Mercury current schedule",
 				"description" : "Get Mercury current schedule",
 				"operationId" : "Get_Mercury current schedule_",
 				"produces" : [
@@ -664,7 +682,8 @@
 		},
 		"/api/{target}/{platform}/lastweek" : {
 			"get" : {
-				"description" : "Get Mercury lastweek",
+				"summary" : "Get Mercury last week",
+				"description" : "Get Mercury last week",
 				"operationId" : "Get_Mercury lastweek_",
 				"produces" : [
 					"application/json"
@@ -693,6 +712,7 @@
 		},
 		"/api/{target}/{platform}/Episode/TopTen" : {
 			"get" : {
+				"summary" : "Get Mercury top ten",
 				"description" : "Get Mercury top ten",
 				"operationId" : "Get_Mercury top ten_",
 				"produces" : [
@@ -722,6 +742,7 @@
 		},
 		"/api/{target}/{platform}/Programme/PerChannel/{channelName}/{resultCount}" : {
 			"get" : {
+				"summary" : "Get Mercury per channel (limited)",
 				"description" : "Get Mercury per channel (limited)",
 				"operationId" : "Get_Mercury per channel (limited)_",
 				"produces" : [
@@ -764,6 +785,7 @@
 		},
 		"/api/{target}/{platform}/Programme/SearchAtoZ/{characterFilter}" : {
 			"get" : {
+				"summary" : "Get Mercury Search AtoZ",
 				"description" : "Get Mercury Search AtoZ",
 				"operationId" : "Get_Mercury Search AtoZ_",
 				"produces" : [
@@ -799,6 +821,7 @@
 		},
 		"/api/{target}/{platform}" : {
 			"get" : {
+				"summary" : "Get Mercury Menu",
 				"description" : "Get Mercury Menu",
 				"operationId" : "Get_Mercury Menu_",
 				"produces" : [
@@ -828,6 +851,7 @@
 		},
 		"/{platform}/programme/{programmeId}/image.jpg" : {
 			"get" : {
+				"summary" : "Get Mercury image by programme id",
 				"description" : "Get Mercury image by programme id",
 				"operationId" : "Get_Mercury image by programme id_",
 				"produces" : [
@@ -874,6 +898,7 @@
 		},
 		"/linking/{yyyymmdd}" : {
 			"get" : {
+				"summary" : "Get Mercury BBC Interlinking",
 				"description" : "Get Mercury BBC Interlinking",
 				"operationId" : "Get_Mercury BBC Interlinking_",
 				"produces" : [
@@ -897,6 +922,7 @@
 		},
 		"/api/{target}/{platform}/Episode/Carousel" : {
 			"get" : {
+				"summary" : "Get Mercury carousel",
 				"description" : "Get Mercury carousel",
 				"operationId" : "Get_Mercury carousel_",
 				"produces" : [
@@ -926,6 +952,7 @@
 		},
 		"/{platform}/episode/{episodeId}/image.jpg" : {
 			"get" : {
+				"summary" : "Get Mercury image by episodeId",
 				"description" : "Get Mercury image by episodeId",
 				"operationId" : "Get_Mercury image by episodeId_",
 				"produces" : [
@@ -971,6 +998,7 @@
 		},
 		"/api/geo/reversegeolookup/{lat}/{long}" : {
 			"get" : {
+				"summary" : "Get Mercury Reverse Geocode",
 				"description" : "Get Mercury Reverse Geocode",
 				"operationId" : "Get_Mercury Reverse Geocode_",
 				"produces" : [
