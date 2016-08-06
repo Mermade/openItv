@@ -27,6 +27,7 @@
 			"name" : "target",
 			"in" : "path",
 			"required" : true,
+			"description": "Whether to return results in xml or json",
 			"type" : "string",
 			"enum": [
 				"xml",
@@ -37,6 +38,7 @@
 			"name" : "platform",
 			"in" : "path",
 			"required" : true,
+			"description": "The platform to return results for",
 			"type" : "string",
 			"enum" : [
 				"dotcom",
@@ -51,13 +53,25 @@
 			"name" : "screensize",
 			"in" : "query",
 			"required" : true,
-			"type" : "string"
+			"description": "The target screen-size",
+			"type" : "string",
+			"enum": [
+				"big"
+			]
 		},
 		"broadcaster": {
 			"name" : "broadcaster",
 			"in" : "query",
 			"required" : true,
-			"type" : "string"
+			"description": "The ITV broadcaster to return results for",
+			"type" : "string",
+			"enum": [
+				"itv",
+				"stv",
+				"utv",
+				"channel",
+				"unknown"
+			]
 		}
 	},
 	"paths" : {
@@ -100,7 +114,7 @@
 		},
 		"/api/{target}/{platform}/Episode/ByDate/{year}/{month}/{day}" : {
 			"get" : {
-				"summary" : "Get Mercury Episode by Date",
+				"summary" : "Get Mercury Episodes by Date",
 				"description" : "Get Mercury Episode by Date",
 				"operationId" : "Get_Mercury Episode by Date_",
 				"produces" : [
@@ -124,6 +138,7 @@
 						"name" : "year",
 						"in" : "path",
 						"required" : true,
+						"description": "The year to return results for",
 						"type" : "number",
 						"format": "int32"
 					},
@@ -131,6 +146,7 @@
 						"name" : "month",
 						"in" : "path",
 						"required" : true,
+						"description": "The month to return results for",
 						"type" : "number",
 						"format": "int32"
 					},
@@ -138,6 +154,7 @@
 						"name" : "day",
 						"in" : "path",
 						"required" : true,
+						"description": "The day to return results for",
 						"type" : "number",
 						"format": "int32"
 					}
@@ -176,12 +193,14 @@
 						"name" : "channelName",
 						"in" : "path",
 						"required" : true,
+						"description": "The channel name to return results for",
 						"type" : "string"
 					},
 					{
 						"name" : "resultCount",
 						"in" : "path",
 						"required" : true,
+						"description": "The number of results to return",
 						"type" : "number",
 						"format": "int32"
 					}
@@ -220,6 +239,7 @@
 						"name" : "searchTerm",
 						"in" : "path",
 						"required" : true,
+						"description": "The search term to search by",
 						"type" : "string"
 					}
 				],
@@ -285,6 +305,7 @@
 						"name" : "channelName",
 						"in" : "path",
 						"required" : true,
+						"description": "The channel name to return results for",
 						"type" : "string"
 					}
 				],
@@ -321,6 +342,7 @@
 						"name" : "episodeId",
 						"in" : "path",
 						"required" : true,
+						"description": "The episode id to find by",
 						"type" : "string"
 					}
 				],
@@ -387,6 +409,7 @@
 						"name" : "channelName",
 						"in" : "path",
 						"required" : true,
+						"description": "The channel name to return results for",
 						"type" : "string"
 					}
 				],
@@ -440,6 +463,7 @@
 						"name" : "episodeId",
 						"in" : "path",
 						"required" : true,
+						"description": "The episode id to find by",
 						"type" : "string"
 					}
 				],
@@ -473,6 +497,7 @@
 						"name" : "postcode",
 						"in" : "path",
 						"required" : true,
+						"description": "The postcode to search by",
 						"type" : "string"
 					}
 				],
@@ -509,6 +534,7 @@
 						"name" : "date",
 						"in" : "path",
 						"required" : true,
+						"description": "The date to return the schedule for (format xx)",
 						"type" : "string"
 					}
 				],
@@ -562,6 +588,7 @@
 						"name" : "programmeId",
 						"in" : "path",
 						"required" : true,
+						"description": "The programme id to find by",
 						"type" : "string"
 					}
 				],
@@ -765,12 +792,14 @@
 						"name" : "channelName",
 						"in" : "path",
 						"required" : true,
+						"description": "The channel name to return results for",
 						"type" : "string"
 					},
 					{
 						"name" : "resultCount",
 						"in" : "path",
 						"required" : true,
+						"description": "The number of results to return",
 						"type" : "number",
 						"format": "int32"
 					}
@@ -808,6 +837,7 @@
 						"name" : "characterFilter",
 						"in" : "path",
 						"required" : true,
+						"description": "The initial character to filter by",
 						"type" : "string"
 					}
 				],
@@ -871,13 +901,14 @@
 						"name" : "w",
 						"in" : "query",
 						"required" : true,
-
+						"description": "Width in pixels",
 						"type" : "integer",
 						"format" : "int32"
 					}, {
 						"name" : "h",
 						"in" : "query",
 						"required" : true,
+						"description": "Height in pixels",
 						"type" : "integer",
 						"format" : "int32"
 					},
@@ -885,6 +916,7 @@
 						"name" : "programmeId",
 						"in" : "path",
 						"required" : true,
+						"description": "The programme id to find by",
 						"type" : "string"
 					}
 				],
@@ -909,6 +941,7 @@
 						"name" : "yyyymmdd",
 						"in" : "path",
 						"required" : true,
+						"description": "The date to retrieve interlinking data for",
 						"type" : "string"
 					}
 				],
@@ -972,18 +1005,21 @@
 						"name" : "episodeId",
 						"in" : "path",
 						"required" : true,
+						"description": "The episode id to find by",
 						"type" : "string"
 					},
 					{
 						"name" : "w",
 						"in" : "query",
 						"required" : true,
+						"description": "Width in pixels",
 						"type" : "integer",
 						"format" : "int32"
 					}, {
 						"name" : "h",
 						"in" : "query",
 						"required" : true,
+						"description": "Height in pixels",
 						"type" : "integer",
 						"format" : "int32"
 					}
@@ -1015,12 +1051,14 @@
 						"name" : "lat",
 						"in" : "path",
 						"required" : true,
+						"description": "Lattitude",
 						"type" : "number",
 						"format" : "float"
 					}, {
 						"name" : "long",
 						"in" : "path",
 						"required" : true,
+						"description": "Longitude",
 						"type" : "number",
 						"format" : "float"
 					}

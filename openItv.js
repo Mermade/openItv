@@ -1,5 +1,11 @@
 const commonScreensize = 'screensize';
+const commonScreensizeBig = 'screensize=big';
 const commonBroadcaster = 'broadcaster';
+const commonBroadcasterItv = 'broadcaster=itv';
+const commonBroadcasterStv = 'broadcaster=stv';
+const commonBroadcasterUtv = 'broadcaster=utv';
+const commonBroadcasterChannel = 'broadcaster=channel';
+const commonBroadcasterUnknown = 'broadcaster=unknown';
 
 /* Get Mercury programme details */
 function getApiEpisodeProgramme(target,platform,programmeid){
