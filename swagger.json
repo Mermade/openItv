@@ -12,7 +12,7 @@
 		"contact": {
 		  "name": "Open ITV Project",
 		  "email": "viewerservices@itv.com",
-		  "url": "www.itv.com"
+		  "url": "http://www.itv.com"
 		},
 		"license" : {
 			"name" : "ITV Open Source License",
@@ -21,7 +21,7 @@
 	},
 	"externalDocs": {
 		"description": "ITV Mercury API",
-		"url": ""
+		"url": "http://benswane.com"
 	},
 	"host" : "mercury.itv.com",
 	"basePath" : "/",
@@ -1039,6 +1039,67 @@
 						"in" : "path",
 						"required" : true,
 						"description": "The programme id to find by",
+						"type" : "string"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : "Default response"
+					}
+				},
+				"security" : []
+			}
+		},
+		"/{platform}/production/image" : {
+			"get" : {
+				"summary" : "Get Mercury image by production id",
+				"description" : "Get Mercury image by production id",
+				"operationId" : "Get_Mercury image by production id_",
+				"produces" : [
+					"application/json"
+				],
+				"tags": [
+				  "Images"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"name" : "w",
+						"in" : "query",
+						"required" : true,
+						"description": "Width in pixels",
+						"type" : "integer",
+						"format" : "int32"
+					}, {
+						"name" : "h",
+						"in" : "query",
+						"required" : true,
+						"description": "Height in pixels",
+						"type" : "integer",
+						"format" : "int32"
+					},
+					{
+						"name" : "quality",
+						"in" : "query",
+						"required" : true,
+						"description": "Quality",
+						"type" : "integer",
+						"format" : "int32"
+					},
+					{
+						"name" : "format",
+						"in" : "query",
+						"required" : true,
+						"description": "The image format to return",
+						"type" : "string"
+					},
+					{
+						"name" : "productionId",
+						"in" : "query",
+						"required" : true,
+						"description": "The production id to find by",
 						"type" : "string"
 					}
 				],

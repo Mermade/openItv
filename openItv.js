@@ -234,6 +234,18 @@ function getProgrammeImageJpg(platform,programmeid){
 const getProgrammeImageJpgW = 'w';
 const getProgrammeImageJpgH = 'h';
 
+/* Get Mercury image by production id */
+function getProductionImage(platform){
+  var p = '/{platform}/production/image';
+  p = p.replace('{platform}',platform);
+  return p;
+}
+const getProductionImageW = 'w';
+const getProductionImageH = 'h';
+const getProductionImageQuality = 'quality';
+const getProductionImageFormat = 'format';
+const getProductionImageProductionid = 'productionId';
+
 /* Get Mercury BBC Interlinking */
 function getLinking(yyyymmdd){
   var p = '/linking/{yyyymmdd}';
@@ -295,6 +307,7 @@ module.exports = {
   getApiProgrammeSearchatoz : getApiProgrammeSearchatoz,
   getApi : getApi,
   getProgrammeImageJpg : getProgrammeImageJpg,
+  getProductionImage : getProductionImage,
   getLinking : getLinking,
   getApiEpisodeCarousel : getApiEpisodeCarousel,
   getEpisodeImageJpg : getEpisodeImageJpg,
