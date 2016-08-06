@@ -118,6 +118,7 @@
 						"name" : "programmeId",
 						"in" : "path",
 						"required" : true,
+						"description": "The programme id to find by",
 						"type" : "string"
 					}
 				],
