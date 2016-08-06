@@ -3,11 +3,25 @@
 	"info" : {
 		"version" : "1.0",
 		"title" : "ITV Mercury",
+		"x-logo": {
+		  "url": "http://presscentre.itvstatic.com/presscentre/sites/presscentre/files/styles/pi_large/public/itv%20logo%20hr_0.jpg?itok=GLMm8IZJ",
+		  "backgroundColor": "#FFFFFF"
+		},
 		"description" : "The ITV Mercury API allows access to broadcast metadata from the ITV platform",
+		"termsOfService": "http://www.itv.com/terms",
+		"contact": {
+		  "name": "Open ITV Project",
+		  "email": "viewerservices@itv.com",
+		  "url": "www.itv.com"
+		},
 		"license" : {
-			"name" : "MIT",
-			"url" : "https://opensource.org/licenses/MIT"
+			"name" : "ITV Open Source License",
+			"url" : "http://www.itv.com/_data/documents/PDF/PDF_ITV_OSS_Licence_April_2016__2_.pdf"
 		}
+	},
+	"externalDocs": {
+		"description": "ITV Mercury API",
+		"url": ""
 	},
 	"host" : "mercury.itv.com",
 	"basePath" : "/",
