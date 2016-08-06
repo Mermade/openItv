@@ -63,7 +63,7 @@
 	"paths" : {
 		"/api/{target}/{platform}/Episode/Programme/{programmeId}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury programme details",
 				"operationId" : "Get_Mercury programme details_",
 				"produces" : [
 					"application/xml",
@@ -91,7 +91,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -99,7 +99,7 @@
 		},
 		"/api/{target}/{platform}/Episode/ByDate/{year}/{month}/{day}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury Episode by Date",
 				"operationId" : "Get_Mercury Episode by Date_",
 				"produces" : [
 					"application/json"
@@ -142,7 +142,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -150,7 +150,7 @@
 		},
 		"/api/{target}/{platform}/programme/perchannel/AD/{channelName}/{resultCount}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury audio-described (limited)",
 				"operationId" : "Get_Mercury audio-described (limited)_",
 				"produces" : [
 					"application/json"
@@ -185,7 +185,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -193,7 +193,7 @@
 		},
 		"/api/{target}/{platform}/Programme/Search/{searchTerm}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury search",
 				"operationId" : "Get_Mercury search_",
 				"produces" : [
 					"application/json"
@@ -221,7 +221,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -229,7 +229,7 @@
 		},
 		"/api/{target}/{platform}/Episode/MostWatched" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury most-watched",
 				"operationId" : "Get_Mercury most-watched_",
 				"produces" : [
 					"application/json"
@@ -250,7 +250,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -258,7 +258,7 @@
 		},
 		"/api/{target}/{platform}/Programme/PerChannel/{channelName}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury per channel",
 				"operationId" : "Get_Mercury per channel_",
 				"produces" : [
 					"application/json"
@@ -285,7 +285,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -293,7 +293,7 @@
 		},
 		"/api/{target}/{platform}/Episode/index/{episodeId}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury episode index",
 				"operationId" : "Get_Mercury episode index_",
 				"produces" : [
 					"application/json"
@@ -320,7 +320,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -328,7 +328,7 @@
 		},
 		"/api/{target}/{platform}/whatsonschedule/today" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury schedule today",
 				"operationId" : "Get_Mercury schedule today_",
 				"produces" : [
 					"application/json"
@@ -349,7 +349,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -357,7 +357,7 @@
 		},
 		"/api/{target}/{platform}/programme/perchannel/AD/{channelName}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury audio-described",
 				"operationId" : "Get_Mercury audio-described_",
 				"produces" : [
 					"application/json"
@@ -384,7 +384,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -392,7 +392,7 @@
 		},
 		"/errorlog.aspx/digestrss" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury error log digest",
 				"operationId" : "Get_Mercury error log digest_",
 				"produces" : [
 					"application/json"
@@ -400,7 +400,7 @@
 				"parameters" : [],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -408,7 +408,7 @@
 		},
 		"/api/{target}/{platform}/episode/programme/{episodeId}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury episode/programme",
 				"operationId" : "Get_Mercury episode/programme_",
 				"produces" : [
 					"application/json"
@@ -435,7 +435,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -443,7 +443,7 @@
 		},
 		"/api/{target}/postcode/{postcode}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury Postcode",
 				"operationId" : "Get_Mercury Postcode_",
 				"produces" : [
 					"application/json"
@@ -467,7 +467,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -475,7 +475,7 @@
 		},
 		"/api/{target}/{platform}/whatsonschedule/{date}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury schedule by date",
 				"operationId" : "Get_Mercury schedule by date_",
 				"produces" : [
 					"application/json"
@@ -502,7 +502,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -510,7 +510,7 @@
 		},
 		"/errorlog.aspx/download" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury error log download",
 				"operationId" : "Get_Mercury error log download_",
 				"produces" : [
 					"application/json"
@@ -518,7 +518,7 @@
 				"parameters" : [],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -526,7 +526,7 @@
 		},
 		"/api/{target}/{platform}/programme/index/{programmeId}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury programme index",
 				"operationId" : "Get_Mercury programme index_",
 				"produces" : [
 					"application/json"
@@ -553,7 +553,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -561,7 +561,7 @@
 		},
 		"/api/{target}/{platform}/Episode/Crucial" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury crucial",
 				"operationId" : "Get_Mercury crucial_",
 				"produces" : [
 					"application/json"
@@ -582,7 +582,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -590,7 +590,7 @@
 		},
 		"/api/{target}/{platform}/whatsonschedule/yesterday" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury schedule yesterday",
 				"operationId" : "Get_Mercury schedule yesterday_",
 				"produces" : [
 					"application/json"
@@ -611,7 +611,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -619,7 +619,7 @@
 		},
 		"/errorlog.aspx/rss" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury error log",
 				"operationId" : "Get_Mercury error log_",
 				"produces" : [
 					"application/json"
@@ -627,7 +627,7 @@
 				"parameters" : [],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -635,7 +635,7 @@
 		},
 		"/api/{target}/{platform}/schedule" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury current schedule",
 				"operationId" : "Get_Mercury current schedule_",
 				"produces" : [
 					"application/json"
@@ -656,7 +656,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -664,7 +664,7 @@
 		},
 		"/api/{target}/{platform}/lastweek" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury lastweek",
 				"operationId" : "Get_Mercury lastweek_",
 				"produces" : [
 					"application/json"
@@ -685,7 +685,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -693,7 +693,7 @@
 		},
 		"/api/{target}/{platform}/Episode/TopTen" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury top ten",
 				"operationId" : "Get_Mercury top ten_",
 				"produces" : [
 					"application/json"
@@ -714,7 +714,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -722,7 +722,7 @@
 		},
 		"/api/{target}/{platform}/Programme/PerChannel/{channelName}/{resultCount}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury per channel (limited)",
 				"operationId" : "Get_Mercury per channel (limited)_",
 				"produces" : [
 					"application/json"
@@ -756,7 +756,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -764,7 +764,7 @@
 		},
 		"/api/{target}/{platform}/Programme/SearchAtoZ/{characterFilter}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury Search AtoZ",
 				"operationId" : "Get_Mercury Search AtoZ_",
 				"produces" : [
 					"application/json"
@@ -791,7 +791,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -799,7 +799,7 @@
 		},
 		"/api/{target}/{platform}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury Menu",
 				"operationId" : "Get_Mercury Menu_",
 				"produces" : [
 					"application/json"
@@ -820,7 +820,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -828,7 +828,7 @@
 		},
 		"/{platform}/programme/{programmeId}/image.jpg" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury image by programme id",
 				"operationId" : "Get_Mercury image by programme id_",
 				"produces" : [
 					"application/json"
@@ -866,7 +866,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -874,7 +874,7 @@
 		},
 		"/linking/{yyyymmdd}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury BBC Interlinking",
 				"operationId" : "Get_Mercury BBC Interlinking_",
 				"produces" : [
 					"application/json"
@@ -889,7 +889,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -897,7 +897,7 @@
 		},
 		"/api/{target}/{platform}/Episode/Carousel" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury carousel",
 				"operationId" : "Get_Mercury carousel_",
 				"produces" : [
 					"application/json"
@@ -918,7 +918,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -926,7 +926,7 @@
 		},
 		"/{platform}/episode/{episodeId}/image.jpg" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury image by episodeId",
 				"operationId" : "Get_Mercury image by episodeId_",
 				"produces" : [
 					"application/json"
@@ -963,7 +963,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
@@ -971,7 +971,7 @@
 		},
 		"/api/geo/reversegeolookup/{lat}/{long}" : {
 			"get" : {
-				"description" : "",
+				"description" : "Get Mercury Reverse Geocode",
 				"operationId" : "Get_Mercury Reverse Geocode_",
 				"produces" : [
 					"application/json"
@@ -999,7 +999,7 @@
 				],
 				"responses" : {
 					"200" : {
-						"description" : ""
+						"description" : "Default response"
 					}
 				},
 				"security" : []
