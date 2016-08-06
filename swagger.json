@@ -281,7 +281,7 @@
 						"in" : "path",
 						"required" : true,
 						"type" : "string"
-					},
+					}
 				],
 				"responses" : {
 					"200" : {
@@ -380,7 +380,7 @@
 						"in" : "path",
 						"required" : true,
 						"type" : "string"
-					},
+					}
 				],
 				"responses" : {
 					"200" : {
