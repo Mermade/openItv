@@ -1,0 +1,1009 @@
+{
+	"swagger" : "2.0",
+	"info" : {
+		"version" : "1.0",
+		"title" : "ITV Mercury",
+		"description" : "The ITV Mercury API allows access to broadcast metadata from the ITV platform",
+		"license" : {
+			"name" : "MIT",
+			"url" : "https://opensource.org/licenses/MIT"
+		}
+	},
+	"host" : "mercury.itv.com",
+	"basePath" : "/",
+	"securityDefinitions" : {},
+	"schemes" : [
+		"http"
+	],
+	"consumes" : [
+		"application/json"
+	],
+	"produces" : [
+		"application/xml",
+		"application/json"
+	],
+	"parameters" : {
+		"target": {
+			"name" : "target",
+			"in" : "path",
+			"required" : true,
+			"type" : "string",
+			"enum": [
+				"xml",
+				"json"
+			]
+		},
+		"platform": {
+			"name" : "platform",
+			"in" : "path",
+			"required" : true,
+			"type" : "string",
+			"enum" : [
+				"dotcom",
+				"mobile",
+				"android",
+				"samsung",
+				"ps3",
+				"youview"
+			]
+		},
+		"screensize": {
+			"name" : "screensize",
+			"in" : "query",
+			"required" : true,
+			"type" : "string"
+		},
+		"broadcaster": {
+			"name" : "broadcaster",
+			"in" : "query",
+			"required" : true,
+			"type" : "string"
+		}
+	},
+	"paths" : {
+		"/api/{target}/{platform}/Episode/Programme/{programmeId}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury programme details_",
+				"produces" : [
+					"application/xml",
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "programmeId",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/Episode/ByDate/{year}/{month}/{day}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury Episode by Date_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "year",
+						"in" : "path",
+						"required" : true,
+						"type" : "number",
+						"format": "int32"
+					},
+					{
+						"name" : "month",
+						"in" : "path",
+						"required" : true,
+						"type" : "number",
+						"format": "int32"
+					},
+					{
+						"name" : "day",
+						"in" : "path",
+						"required" : true,
+						"type" : "number",
+						"format": "int32"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/programme/perchannel/AD/{channelName}/{resultCount}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury audio-described (limited)_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "channelName",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					},
+					{
+						"name" : "resultCount",
+						"in" : "path",
+						"required" : true,
+						"type" : "number",
+						"format": "int32"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/Programme/Search/{searchTerm}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury search_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "searchTerm",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/Episode/MostWatched" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury most-watched_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/Programme/PerChannel/{channelName}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury per channel_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "channelName",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					},
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/Episode/index/{episodeId}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury episode index_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "episodeId",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/whatsonschedule/today" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury schedule today_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/programme/perchannel/AD/{channelName}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury audio-described_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "channelName",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					},
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/errorlog.aspx/digestrss" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury error log digest_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/episode/programme/{episodeId}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury episode/programme_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "episodeId",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/postcode/{postcode}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury Postcode_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "postcode",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/whatsonschedule/{date}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury schedule by date_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "date",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/errorlog.aspx/download" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury error log download_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/programme/index/{programmeId}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury programme index_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "programmeId",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/Episode/Crucial" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury crucial_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/whatsonschedule/yesterday" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury schedule yesterday_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/errorlog.aspx/rss" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury error log_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/schedule" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury current schedule_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/lastweek" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury lastweek_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/Episode/TopTen" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury top ten_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/Programme/PerChannel/{channelName}/{resultCount}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury per channel (limited)_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "channelName",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					},
+					{
+						"name" : "resultCount",
+						"in" : "path",
+						"required" : true,
+						"type" : "number",
+						"format": "int32"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/Programme/SearchAtoZ/{characterFilter}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury Search AtoZ_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "characterFilter",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury Menu_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/{platform}/programme/{programmeId}/image.jpg" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury image by programme id_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "w",
+						"in" : "query",
+						"required" : true,
+
+						"type" : "integer",
+						"format" : "int32"
+					}, {
+						"name" : "h",
+						"in" : "query",
+						"required" : true,
+						"type" : "integer",
+						"format" : "int32"
+					},
+					{
+						"name" : "programmeId",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/linking/{yyyymmdd}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury BBC Interlinking_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"name" : "yyyymmdd",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/{target}/{platform}/Episode/Carousel" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury carousel_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/target"
+					},
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/{platform}/episode/{episodeId}/image.jpg" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury image by episodeId_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/platform"
+					},
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "episodeId",
+						"in" : "path",
+						"required" : true,
+						"type" : "string"
+					},
+					{
+						"name" : "w",
+						"in" : "query",
+						"required" : true,
+						"type" : "integer",
+						"format" : "int32"
+					}, {
+						"name" : "h",
+						"in" : "query",
+						"required" : true,
+						"type" : "integer",
+						"format" : "int32"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		},
+		"/api/geo/reversegeolookup/{lat}/{long}" : {
+			"get" : {
+				"description" : "",
+				"operationId" : "Get_Mercury Reverse Geocode_",
+				"produces" : [
+					"application/json"
+				],
+				"parameters" : [
+					{
+						"$ref": "#/parameters/broadcaster"
+					},
+					{
+						"$ref": "#/parameters/screensize"
+					},
+					{
+						"name" : "lat",
+						"in" : "path",
+						"required" : true,
+						"type" : "number",
+						"format" : "float"
+					}, {
+						"name" : "long",
+						"in" : "path",
+						"required" : true,
+						"type" : "number",
+						"format" : "float"
+					}
+				],
+				"responses" : {
+					"200" : {
+						"description" : ""
+					}
+				},
+				"security" : []
+			}
+		}
+	}
+}

@@ -1,3 +1,7 @@
+swagger-base.json
+examples
+*.txt
+
 # Logs
 logs
 *.log
