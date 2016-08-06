@@ -84,6 +84,9 @@
 					"application/xml",
 					"application/json"
 				],
+				"tags": [
+				  "Programmes"
+				],
 				"parameters" : [
 					{
 						"$ref": "#/parameters/target"
@@ -119,6 +122,9 @@
 				"operationId" : "Get_Mercury Episode by Date_",
 				"produces" : [
 					"application/json"
+				],
+				"tags": [
+				  "Episodes"
 				],
 				"parameters" : [
 					{
@@ -175,6 +181,9 @@
 				"produces" : [
 					"application/json"
 				],
+				"tags": [
+				  "Programmes"
+				],
 				"parameters" : [
 					{
 
@@ -194,7 +203,15 @@
 						"in" : "path",
 						"required" : true,
 						"description": "The channel name to return results for",
-						"type" : "string"
+						"type" : "string",
+						"enum": [
+							"itv1",
+							"itv2",
+							"itv3",
+							"itv4",
+							"itvbe",
+							"citv"
+						]
 					},
 					{
 						"name" : "resultCount",
@@ -220,6 +237,9 @@
 				"operationId" : "Get_Mercury search_",
 				"produces" : [
 					"application/json"
+				],
+				"tags": [
+				  "Programmes"
 				],
 				"parameters" : [
 					{
@@ -259,6 +279,9 @@
 				"produces" : [
 					"application/json"
 				],
+				"tags": [
+				  "Episodes"
+				],
 				"parameters" : [
 					{
 						"$ref": "#/parameters/target"
@@ -288,6 +311,9 @@
 				"produces" : [
 					"application/json"
 				],
+				"tags": [
+				  "Programmes"
+				],
 				"parameters" : [
 					{
 						"$ref": "#/parameters/target"
@@ -306,7 +332,15 @@
 						"in" : "path",
 						"required" : true,
 						"description": "The channel name to return results for",
-						"type" : "string"
+						"type" : "string",
+						"enum": [
+							"itv1",
+							"itv2",
+							"itv3",
+							"itv4",
+							"itvbe",
+							"citv"
+						]
 					}
 				],
 				"responses" : {
@@ -324,6 +358,9 @@
 				"operationId" : "Get_Mercury episode index_",
 				"produces" : [
 					"application/json"
+				],
+				"tags": [
+				  "Episodes"
 				],
 				"parameters" : [
 					{
@@ -362,6 +399,9 @@
 				"produces" : [
 					"application/json"
 				],
+				"tags": [
+				  "Schedules"
+				],
 				"parameters" : [
 					{
 						"$ref": "#/parameters/target"
@@ -392,6 +432,9 @@
 				"produces" : [
 					"application/json"
 				],
+				"tags": [
+				  "Programmes"
+				],
 				"parameters" : [
 					{
 						"$ref": "#/parameters/target"
@@ -410,7 +453,15 @@
 						"in" : "path",
 						"required" : true,
 						"description": "The channel name to return results for",
-						"type" : "string"
+						"type" : "string",
+						"enum": [
+							"itv1",
+							"itv2",
+							"itv3",
+							"itv4",
+							"itvbe",
+							"citv"
+						]
 					}
 				],
 				"responses" : {
@@ -429,6 +480,9 @@
 				"produces" : [
 					"application/json"
 				],
+				"tags": [
+				  "Error logging"
+				],
 				"parameters" : [],
 				"responses" : {
 					"200" : {
@@ -445,6 +499,9 @@
 				"operationId" : "Get_Mercury episode/programme_",
 				"produces" : [
 					"application/json"
+				],
+				"tags": [
+				  "Programmes"
 				],
 				"parameters" : [
 					{
@@ -483,6 +540,9 @@
 				"produces" : [
 					"application/json"
 				],
+				"tags": [
+				  "Geo-coding"
+				],
 				"parameters" : [
 					{
 						"$ref": "#/parameters/target"
@@ -516,6 +576,9 @@
 				"operationId" : "Get_Mercury schedule by date_",
 				"produces" : [
 					"application/json"
+				],
+				"tags": [
+				  "Schedules"
 				],
 				"parameters" : [
 					{
@@ -554,6 +617,9 @@
 				"produces" : [
 					"application/json"
 				],
+				"tags": [
+				  "Error logging"
+				],
 				"parameters" : [],
 				"responses" : {
 					"200" : {
@@ -570,6 +636,9 @@
 				"operationId" : "Get_Mercury programme index_",
 				"produces" : [
 					"application/json"
+				],
+				"tags": [
+				  "Programmes"
 				],
 				"parameters" : [
 					{
@@ -608,6 +677,9 @@
 				"produces" : [
 					"application/json"
 				],
+				"tags": [
+				  "Summaries"
+				],
 				"parameters" : [
 					{
 						"$ref": "#/parameters/target"
@@ -637,6 +709,9 @@
 				"operationId" : "Get_Mercury schedule yesterday_",
 				"produces" : [
 					"application/json"
+				],
+				"tags": [
+				  "Schedules"
 				],
 				"parameters" : [
 					{
@@ -668,6 +743,9 @@
 				"produces" : [
 					"application/json"
 				],
+				"tags": [
+				  "Error logging"
+				],
 				"parameters" : [],
 				"responses" : {
 					"200" : {
@@ -684,6 +762,9 @@
 				"operationId" : "Get_Mercury current schedule_",
 				"produces" : [
 					"application/json"
+				],
+				"tags": [
+				  "Schedules"
 				],
 				"parameters" : [
 					{
@@ -715,6 +796,9 @@
 				"produces" : [
 					"application/json"
 				],
+				"tags": [
+				  "Schedules"
+				],
 				"parameters" : [
 					{
 						"$ref": "#/parameters/target"
@@ -744,6 +828,9 @@
 				"operationId" : "Get_Mercury top ten_",
 				"produces" : [
 					"application/json"
+				],
+				"tags": [
+				  "Summaries"
 				],
 				"parameters" : [
 					{
@@ -775,6 +862,9 @@
 				"produces" : [
 					"application/json"
 				],
+				"tags": [
+				  "Programmes"
+				],
 				"parameters" : [
 					{
 						"$ref": "#/parameters/target"
@@ -793,7 +883,15 @@
 						"in" : "path",
 						"required" : true,
 						"description": "The channel name to return results for",
-						"type" : "string"
+						"type" : "string",
+						"enum": [
+							"itv1",
+							"itv2",
+							"itv3",
+							"itv4",
+							"itvbe",
+							"citv"
+						]
 					},
 					{
 						"name" : "resultCount",
@@ -819,6 +917,9 @@
 				"operationId" : "Get_Mercury Search AtoZ_",
 				"produces" : [
 					"application/json"
+				],
+				"tags": [
+				  "Programmes"
 				],
 				"parameters" : [
 					{
@@ -857,6 +958,9 @@
 				"produces" : [
 					"application/json"
 				],
+				"tags": [
+				  "Top level menu"
+				],
 				"parameters" : [
 					{
 						"$ref": "#/parameters/target"
@@ -886,6 +990,9 @@
 				"operationId" : "Get_Mercury image by programme id_",
 				"produces" : [
 					"application/json"
+				],
+				"tags": [
+				  "Images"
 				],
 				"parameters" : [
 					{
@@ -936,6 +1043,9 @@
 				"produces" : [
 					"application/json"
 				],
+				"tags": [
+				  "Interlinking"
+				],
 				"parameters" : [
 					{
 						"name" : "yyyymmdd",
@@ -960,6 +1070,9 @@
 				"operationId" : "Get_Mercury carousel_",
 				"produces" : [
 					"application/json"
+				],
+				"tags": [
+				  "Summaries"
 				],
 				"parameters" : [
 					{
@@ -990,6 +1103,9 @@
 				"operationId" : "Get_Mercury image by episodeId_",
 				"produces" : [
 					"application/json"
+				],
+				"tags": [
+				  "Images"
 				],
 				"parameters" : [
 					{
@@ -1039,6 +1155,9 @@
 				"operationId" : "Get_Mercury Reverse Geocode_",
 				"produces" : [
 					"application/json"
+				],
+				"tags": [
+				  "Geo-coding"
 				],
 				"parameters" : [
 					{

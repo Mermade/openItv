@@ -36,6 +36,12 @@ function getApiProgrammePerchannelAd(target,platform,channelname,resultcount){
   p = p.replace('{resultCount}',resultcount);
   return p;
 }
+const getApiProgrammePerchannelAdChannelnameItv1 = 'itv1';
+const getApiProgrammePerchannelAdChannelnameItv2 = 'itv2';
+const getApiProgrammePerchannelAdChannelnameItv3 = 'itv3';
+const getApiProgrammePerchannelAdChannelnameItv4 = 'itv4';
+const getApiProgrammePerchannelAdChannelnameItvbe = 'itvbe';
+const getApiProgrammePerchannelAdChannelnameCitv = 'citv';
 
 /* Get Mercury search */
 function getApiProgrammeSearch(target,platform,searchterm){
@@ -62,6 +68,12 @@ function getApiProgrammePerchannel(target,platform,channelname){
   p = p.replace('{channelName}',channelname);
   return p;
 }
+const getApiProgrammePerchannelChannelnameItv1 = 'itv1';
+const getApiProgrammePerchannelChannelnameItv2 = 'itv2';
+const getApiProgrammePerchannelChannelnameItv3 = 'itv3';
+const getApiProgrammePerchannelChannelnameItv4 = 'itv4';
+const getApiProgrammePerchannelChannelnameItvbe = 'itvbe';
+const getApiProgrammePerchannelChannelnameCitv = 'citv';
 
 /* Get Mercury episode index */
 function getApiEpisodeIndex(target,platform,episodeid){
@@ -88,6 +100,12 @@ function getApiProgrammePerchannelAd2(target,platform,channelname){
   p = p.replace('{channelName}',channelname);
   return p;
 }
+const getApiProgrammePerchannelAd2ChannelnameItv1 = 'itv1';
+const getApiProgrammePerchannelAd2ChannelnameItv2 = 'itv2';
+const getApiProgrammePerchannelAd2ChannelnameItv3 = 'itv3';
+const getApiProgrammePerchannelAd2ChannelnameItv4 = 'itv4';
+const getApiProgrammePerchannelAd2ChannelnameItvbe = 'itvbe';
+const getApiProgrammePerchannelAd2ChannelnameCitv = 'citv';
 
 /* Get Mercury error log digest */
 const getErrorlogAspxDigestrss = '//errorlog.aspx/digestrss';
@@ -182,6 +200,12 @@ function getApiProgrammePerchannel2(target,platform,channelname,resultcount){
   p = p.replace('{resultCount}',resultcount);
   return p;
 }
+const getApiProgrammePerchannel2ChannelnameItv1 = 'itv1';
+const getApiProgrammePerchannel2ChannelnameItv2 = 'itv2';
+const getApiProgrammePerchannel2ChannelnameItv3 = 'itv3';
+const getApiProgrammePerchannel2ChannelnameItv4 = 'itv4';
+const getApiProgrammePerchannel2ChannelnameItvbe = 'itvbe';
+const getApiProgrammePerchannel2ChannelnameCitv = 'citv';
 
 /* Get Mercury Search AtoZ */
 function getApiProgrammeSearchatoz(target,platform,characterfilter){
