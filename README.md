@@ -1,5 +1,5 @@
 # openItv
-Open ITV API SDK
+Open ITV Mercury API SDK
 
 [Swagger (OpenApi) 2.0 Spec](http://mermade.github.io/swagger/index.html?url=https://raw.githubusercontent.com/Mermade/openItv/master/swagger.json)
 
