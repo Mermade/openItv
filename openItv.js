@@ -35,6 +35,7 @@ function getApiEpisodeProgramme(target,platform,programmeid){
   p = p.replace('{programmeId}',programmeid);
   return p;
 }
+/* The programme id to find by */
 
 /* Get Mercury Episode by Date */
 function getApiEpisodeBydate(target,platform,year,month,day){
@@ -46,6 +47,9 @@ function getApiEpisodeBydate(target,platform,year,month,day){
   p = p.replace('{day}',day);
   return p;
 }
+/* The year to return results for */
+/* The month to return results for */
+/* The day to return results for */
 
 /* Get Mercury audio-described (limited) */
 function getApiProgrammePerchannelAd(target,platform,channelname,resultcount){
@@ -56,6 +60,7 @@ function getApiProgrammePerchannelAd(target,platform,channelname,resultcount){
   p = p.replace('{resultCount}',resultcount);
   return p;
 }
+/* The number of results to return */
 
 /* Get Mercury search */
 function getApiProgrammeSearch(target,platform,searchterm){
@@ -65,6 +70,7 @@ function getApiProgrammeSearch(target,platform,searchterm){
   p = p.replace('{searchTerm}',searchterm);
   return p;
 }
+/* The search term to search by */
 
 /* Get Mercury most-watched */
 function getApiEpisodeMostwatched(target,platform){
@@ -91,6 +97,7 @@ function getApiEpisodeIndex(target,platform,episodeid){
   p = p.replace('{episodeId}',episodeid);
   return p;
 }
+/* The episode id to find by */
 
 /* Get Mercury schedule today */
 function getApiWhatsonscheduleToday(target,platform){
@@ -120,6 +127,7 @@ function getApiEpisodeProgramme2(target,platform,episodeid){
   p = p.replace('{episodeId}',episodeid);
   return p;
 }
+/* The episode id to find by */
 
 /* Get Mercury Postcode */
 function getApiPostcode(target,postcode){
@@ -128,6 +136,7 @@ function getApiPostcode(target,postcode){
   p = p.replace('{postcode}',postcode);
   return p;
 }
+/* The postcode to search by */
 
 /* Get Mercury schedule by date */
 function getApiWhatsonschedule(target,platform,date){
@@ -137,6 +146,7 @@ function getApiWhatsonschedule(target,platform,date){
   p = p.replace('{date}',date);
   return p;
 }
+/* The date to return the schedule for (format yyyymmdd) */
 
 /* Get Mercury error log download */
 const getErrorlogAspxDownload = '//errorlog.aspx/download';
@@ -149,6 +159,7 @@ function getApiProgrammeIndex(target,platform,programmeid){
   p = p.replace('{programmeId}',programmeid);
   return p;
 }
+/* The programme id to find by */
 
 /* Get Mercury crucial */
 function getApiEpisodeCrucial(target,platform){
@@ -202,6 +213,7 @@ function getApiProgrammePerchannel2(target,platform,channelname,resultcount){
   p = p.replace('{resultCount}',resultcount);
   return p;
 }
+/* The number of results to return */
 
 /* Get Mercury Search AtoZ */
 function getApiProgrammeSearchatoz(target,platform,characterfilter){
@@ -211,6 +223,7 @@ function getApiProgrammeSearchatoz(target,platform,characterfilter){
   p = p.replace('{characterFilter}',characterfilter);
   return p;
 }
+/* The initial character to filter by */
 
 /* Get Mercury Menu */
 function getApi(target,platform){
@@ -227,8 +240,11 @@ function getProgrammeImageJpg(platform,programmeid){
   p = p.replace('{programmeId}',programmeid);
   return p;
 }
+/* Width in pixels */
 const getProgrammeImageJpgW = 'w';
+/* Height in pixels */
 const getProgrammeImageJpgH = 'h';
+/* The programme id to find by */
 
 /* Get Mercury image by production id */
 function getProductionImage(platform){
@@ -236,10 +252,15 @@ function getProductionImage(platform){
   p = p.replace('{platform}',platform);
   return p;
 }
+/* Width in pixels */
 const getProductionImageW = 'w';
+/* Height in pixels */
 const getProductionImageH = 'h';
+/* Quality */
 const getProductionImageQuality = 'quality';
+/* The image format to return */
 const getProductionImageFormat = 'format';
+/* The production id to find by */
 const getProductionImageProductionid = 'productionId';
 
 /* Get Mercury BBC Interlinking */
@@ -248,6 +269,7 @@ function getLinking(yyyymmdd){
   p = p.replace('{yyyymmdd}',yyyymmdd);
   return p;
 }
+/* The date to retrieve interlinking data for */
 
 /* Get Mercury carousel */
 function getApiEpisodeCarousel(target,platform){
@@ -264,7 +286,10 @@ function getEpisodeImageJpg(platform,episodeid){
   p = p.replace('{episodeId}',episodeid);
   return p;
 }
+/* The episode id to find by */
+/* Width in pixels */
 const getEpisodeImageJpgW = 'w';
+/* Height in pixels */
 const getEpisodeImageJpgH = 'h';
 
 /* Get Mercury Reverse Geocode */
@@ -274,6 +299,8 @@ function getApiGeoReversegeolookup(lat,long){
   p = p.replace('{long}',long);
   return p;
 }
+/* Lattitude */
+/* Longitude */
 
 module.exports = {
   commonTargetXml : commonTargetXml,
