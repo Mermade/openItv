@@ -2,7 +2,7 @@
   "name": "openitv",
   "version": "1.0.0",
   "description": "ITV API SDK",
-  "main": "checkSwagger.js",
+  "main": "parseApi.js",
   "directories": {
     "example": "examples"
   },

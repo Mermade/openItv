@@ -46,7 +46,8 @@
 			"enum": [
 				"xml",
 				"json"
-			]
+			],
+			"default": "xml"
 		},
 		"platform": {
 			"name" : "platform",
@@ -61,7 +62,8 @@
 				"samsung",
 				"ps3",
 				"youview"
-			]
+			],
+			"default": "mobile"
 		},
 		"screensize": {
 			"name" : "screensize",
@@ -70,8 +72,10 @@
 			"description": "The target screen-size",
 			"type" : "string",
 			"enum": [
-				"big"
-			]
+				"big",
+				"small"
+			],
+			"default": "big"
 		},
 		"broadcaster": {
 			"name" : "broadcaster",
@@ -85,6 +89,22 @@
 				"utv",
 				"channel",
 				"unknown"
+			],
+			"default": "itv"
+		},
+		"channelName": {
+			"name" : "channelName",
+			"in" : "path",
+			"required" : true,
+			"description": "The channel name to return results for",
+			"type" : "string",
+			"enum": [
+				"itv1",
+				"itv2",
+				"itv3",
+				"itv4",
+				"itvbe",
+				"citv"
 			]
 		}
 	},
@@ -214,19 +234,7 @@
 						"$ref": "#/parameters/screensize"
 					},
 					{
-						"name" : "channelName",
-						"in" : "path",
-						"required" : true,
-						"description": "The channel name to return results for",
-						"type" : "string",
-						"enum": [
-							"itv1",
-							"itv2",
-							"itv3",
-							"itv4",
-							"itvbe",
-							"citv"
-						]
+						"$ref": "#/parameters/channelName"
 					},
 					{
 						"name" : "resultCount",
@@ -343,19 +351,7 @@
 						"$ref": "#/parameters/screensize"
 					},
 					{
-						"name" : "channelName",
-						"in" : "path",
-						"required" : true,
-						"description": "The channel name to return results for",
-						"type" : "string",
-						"enum": [
-							"itv1",
-							"itv2",
-							"itv3",
-							"itv4",
-							"itvbe",
-							"citv"
-						]
+						"$ref": "#/parameters/channelName"
 					}
 				],
 				"responses" : {
@@ -464,19 +460,7 @@
 						"$ref": "#/parameters/screensize"
 					},
 					{
-						"name" : "channelName",
-						"in" : "path",
-						"required" : true,
-						"description": "The channel name to return results for",
-						"type" : "string",
-						"enum": [
-							"itv1",
-							"itv2",
-							"itv3",
-							"itv4",
-							"itvbe",
-							"citv"
-						]
+						"$ref": "#/parameters/channelName"
 					}
 				],
 				"responses" : {
@@ -612,7 +596,7 @@
 						"name" : "date",
 						"in" : "path",
 						"required" : true,
-						"description": "The date to return the schedule for (format xx)",
+						"description": "The date to return the schedule for (format yyyymmdd)",
 						"type" : "string"
 					}
 				],
@@ -894,19 +878,7 @@
 						"$ref": "#/parameters/screensize"
 					},
 					{
-						"name" : "channelName",
-						"in" : "path",
-						"required" : true,
-						"description": "The channel name to return results for",
-						"type" : "string",
-						"enum": [
-							"itv1",
-							"itv2",
-							"itv3",
-							"itv4",
-							"itvbe",
-							"citv"
-						]
+						"$ref": "#/parameters/channelName"
 					},
 					{
 						"name" : "resultCount",
