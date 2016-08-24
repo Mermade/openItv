@@ -1,7 +1,7 @@
 {
   "name": "openitv",
   "version": "1.0.1",
-  "description": "ITV API SDK",
+  "description": "ITV Mercury API SDK",
   "main": "parseApi.js",
   "directories": {
     "example": "examples"
@@ -19,6 +19,10 @@
     "api",
     "mercury"
   ],
+  "dependencies": {
+    "is-my-json-valid": "latest",
+    "openapi2js": "latest"
+  },
   "author": "Mike Ralphson",
   "license": "BSD-3-Clause",
   "bugs": {
