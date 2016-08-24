@@ -1,4 +1,4 @@
-/* checkSwagger.js */
+/* openItv parseApi.js */
 
 var path = require('path');
 var validator = require('is-my-json-valid');
@@ -19,5 +19,6 @@ if (errors) {
 }
 else {
     console.log('Valid swagger 2.0');
+    console.log('Creating openItv.js API');
     oa2js.openAPI2js('./swagger.json','./openItv.js');
 }
