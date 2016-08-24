@@ -1,40 +1,47 @@
-/* Whether to return results in xml or json */
+/**
+@author openapi2js http://github.com/mermade/openapi2js
+@copyright Copyright (c) 2016 Mike Ralphson
+@license https://opensource.org/licenses/BSD-3-Clause
+*/
+/** Whether to return results in xml or json */
 const commonTargetXml = 'xml';
 const commonTargetJson = 'json';
-/* The platform to return results for */
+/** The platform to return results for */
 const commonPlatformDotcom = 'dotcom';
 const commonPlatformMobile = 'mobile';
 const commonPlatformAndroid = 'android';
 const commonPlatformSamsung = 'samsung';
 const commonPlatformPs3 = 'ps3';
 const commonPlatformYouview = 'youview';
-/* The target screen-size */
+/** The target screen-size */
 const commonScreensize = 'screensize';
 const commonScreensizeBig = 'screensize=big';
 const commonScreensizeSmall = 'screensize=small';
-/* The ITV broadcaster to return results for */
+/** The ITV broadcaster to return results for */
 const commonBroadcaster = 'broadcaster';
 const commonBroadcasterItv = 'broadcaster=itv';
 const commonBroadcasterStv = 'broadcaster=stv';
 const commonBroadcasterUtv = 'broadcaster=utv';
 const commonBroadcasterChannel = 'broadcaster=channel';
 const commonBroadcasterUnknown = 'broadcaster=unknown';
-/* The channel name to return results for */
+/** The channel name to return results for */
 const commonChannelnameItv1 = 'itv1';
 const commonChannelnameItv2 = 'itv2';
 const commonChannelnameItv3 = 'itv3';
 const commonChannelnameItv4 = 'itv4';
 const commonChannelnameItvbe = 'itvbe';
 const commonChannelnameCitv = 'citv';
-/* Width in pixels */
+/** Width in pixels */
 const commonW = 'w';
-/* Height in pixels */
+/** Height in pixels */
 const commonH = 'h';
 
 /** Get Mercury programme details
 @target {string} Whether to return results in xml or json
 @platform {string} The platform to return results for
-@programmeId {string} The programme id to find by*/
+@programmeId {string} The programme id to find by
+@return {string} The path to request
+*/
 function getApiEpisodeProgramme(target,platform,programmeid){
   var p = '/api/{target}/{platform}/Episode/Programme/{programmeId}';
   p = p.replace('{target}',target);
@@ -48,7 +55,9 @@ function getApiEpisodeProgramme(target,platform,programmeid){
 @platform {string} The platform to return results for
 @year {number} The year to return results for
 @month {number} The month to return results for
-@day {number} The day to return results for*/
+@day {number} The day to return results for
+@return {string} The path to request
+*/
 function getApiEpisodeBydate(target,platform,year,month,day){
   var p = '/api/{target}/{platform}/Episode/ByDate/{year}/{month}/{day}';
   p = p.replace('{target}',target);
@@ -63,7 +72,9 @@ function getApiEpisodeBydate(target,platform,year,month,day){
 @target {string} Whether to return results in xml or json
 @platform {string} The platform to return results for
 @channelName {string} The channel name to return results for
-@resultCount {number} The number of results to return*/
+@resultCount {number} The number of results to return
+@return {string} The path to request
+*/
 function getApiProgrammePerchannelAd(target,platform,channelname,resultcount){
   var p = '/api/{target}/{platform}/programme/perchannel/AD/{channelName}/{resultCount}';
   p = p.replace('{target}',target);
@@ -76,7 +87,9 @@ function getApiProgrammePerchannelAd(target,platform,channelname,resultcount){
 /** Get Mercury search
 @target {string} Whether to return results in xml or json
 @platform {string} The platform to return results for
-@searchTerm {string} The search term to search by*/
+@searchTerm {string} The search term to search by
+@return {string} The path to request
+*/
 function getApiProgrammeSearch(target,platform,searchterm){
   var p = '/api/{target}/{platform}/Programme/Search/{searchTerm}';
   p = p.replace('{target}',target);
@@ -87,7 +100,9 @@ function getApiProgrammeSearch(target,platform,searchterm){
 
 /** Get Mercury most-watched
 @target {string} Whether to return results in xml or json
-@platform {string} The platform to return results for*/
+@platform {string} The platform to return results for
+@return {string} The path to request
+*/
 function getApiEpisodeMostwatched(target,platform){
   var p = '/api/{target}/{platform}/Episode/MostWatched';
   p = p.replace('{target}',target);
@@ -98,7 +113,9 @@ function getApiEpisodeMostwatched(target,platform){
 /** Get Mercury per channel
 @target {string} Whether to return results in xml or json
 @platform {string} The platform to return results for
-@channelName {string} The channel name to return results for*/
+@channelName {string} The channel name to return results for
+@return {string} The path to request
+*/
 function getApiProgrammePerchannel(target,platform,channelname){
   var p = '/api/{target}/{platform}/Programme/PerChannel/{channelName}';
   p = p.replace('{target}',target);
@@ -110,7 +127,9 @@ function getApiProgrammePerchannel(target,platform,channelname){
 /** Get Mercury episode index
 @target {string} Whether to return results in xml or json
 @platform {string} The platform to return results for
-@episodeId {string} The episode id to find by*/
+@episodeId {string} The episode id to find by
+@return {string} The path to request
+*/
 function getApiEpisodeIndex(target,platform,episodeid){
   var p = '/api/{target}/{platform}/Episode/index/{episodeId}';
   p = p.replace('{target}',target);
@@ -121,7 +140,9 @@ function getApiEpisodeIndex(target,platform,episodeid){
 
 /** Get Mercury schedule today
 @target {string} Whether to return results in xml or json
-@platform {string} The platform to return results for*/
+@platform {string} The platform to return results for
+@return {string} The path to request
+*/
 function getApiWhatsonscheduleToday(target,platform){
   var p = '/api/{target}/{platform}/whatsonschedule/today';
   p = p.replace('{target}',target);
@@ -132,7 +153,9 @@ function getApiWhatsonscheduleToday(target,platform){
 /** Get Mercury audio-described
 @target {string} Whether to return results in xml or json
 @platform {string} The platform to return results for
-@channelName {string} The channel name to return results for*/
+@channelName {string} The channel name to return results for
+@return {string} The path to request
+*/
 function getApiProgrammePerchannelAd2(target,platform,channelname){
   var p = '/api/{target}/{platform}/programme/perchannel/AD/{channelName}';
   p = p.replace('{target}',target);
@@ -147,7 +170,9 @@ const getErrorlogAspxDigestrss = '/errorlog.aspx/digestrss';
 /** Get Mercury episode/programme
 @target {string} Whether to return results in xml or json
 @platform {string} The platform to return results for
-@episodeId {string} The episode id to find by*/
+@episodeId {string} The episode id to find by
+@return {string} The path to request
+*/
 function getApiEpisodeProgramme2(target,platform,episodeid){
   var p = '/api/{target}/{platform}/episode/programme/{episodeId}';
   p = p.replace('{target}',target);
@@ -158,7 +183,9 @@ function getApiEpisodeProgramme2(target,platform,episodeid){
 
 /** Get Mercury Postcode
 @target {string} Whether to return results in xml or json
-@postcode {string} The postcode to search by*/
+@postcode {string} The postcode to search by
+@return {string} The path to request
+*/
 function getApiPostcode(target,postcode){
   var p = '/api/{target}/postcode/{postcode}';
   p = p.replace('{target}',target);
@@ -169,7 +196,9 @@ function getApiPostcode(target,postcode){
 /** Get Mercury schedule by date
 @target {string} Whether to return results in xml or json
 @platform {string} The platform to return results for
-@date {string} The date to return the schedule for (format yyyymmdd)*/
+@date {string} The date to return the schedule for (format yyyymmdd)
+@return {string} The path to request
+*/
 function getApiWhatsonschedule(target,platform,date){
   var p = '/api/{target}/{platform}/whatsonschedule/{date}';
   p = p.replace('{target}',target);
@@ -184,7 +213,9 @@ const getErrorlogAspxDownload = '/errorlog.aspx/download';
 /** Get Mercury programme index
 @target {string} Whether to return results in xml or json
 @platform {string} The platform to return results for
-@programmeId {string} The programme id to find by*/
+@programmeId {string} The programme id to find by
+@return {string} The path to request
+*/
 function getApiProgrammeIndex(target,platform,programmeid){
   var p = '/api/{target}/{platform}/programme/index/{programmeId}';
   p = p.replace('{target}',target);
@@ -195,7 +226,9 @@ function getApiProgrammeIndex(target,platform,programmeid){
 
 /** Get Mercury crucial
 @target {string} Whether to return results in xml or json
-@platform {string} The platform to return results for*/
+@platform {string} The platform to return results for
+@return {string} The path to request
+*/
 function getApiEpisodeCrucial(target,platform){
   var p = '/api/{target}/{platform}/Episode/Crucial';
   p = p.replace('{target}',target);
@@ -205,7 +238,9 @@ function getApiEpisodeCrucial(target,platform){
 
 /** Get Mercury schedule yesterday
 @target {string} Whether to return results in xml or json
-@platform {string} The platform to return results for*/
+@platform {string} The platform to return results for
+@return {string} The path to request
+*/
 function getApiWhatsonscheduleYesterday(target,platform){
   var p = '/api/{target}/{platform}/whatsonschedule/yesterday';
   p = p.replace('{target}',target);
@@ -218,7 +253,9 @@ const getErrorlogAspxRss = '/errorlog.aspx/rss';
 
 /** Get Mercury current schedule
 @target {string} Whether to return results in xml or json
-@platform {string} The platform to return results for*/
+@platform {string} The platform to return results for
+@return {string} The path to request
+*/
 function getApiSchedule(target,platform){
   var p = '/api/{target}/{platform}/schedule';
   p = p.replace('{target}',target);
@@ -228,7 +265,9 @@ function getApiSchedule(target,platform){
 
 /** Get Mercury last week
 @target {string} Whether to return results in xml or json
-@platform {string} The platform to return results for*/
+@platform {string} The platform to return results for
+@return {string} The path to request
+*/
 function getApiLastweek(target,platform){
   var p = '/api/{target}/{platform}/lastweek';
   p = p.replace('{target}',target);
@@ -238,7 +277,9 @@ function getApiLastweek(target,platform){
 
 /** Get Mercury top ten
 @target {string} Whether to return results in xml or json
-@platform {string} The platform to return results for*/
+@platform {string} The platform to return results for
+@return {string} The path to request
+*/
 function getApiEpisodeTopten(target,platform){
   var p = '/api/{target}/{platform}/Episode/TopTen';
   p = p.replace('{target}',target);
@@ -250,7 +291,9 @@ function getApiEpisodeTopten(target,platform){
 @target {string} Whether to return results in xml or json
 @platform {string} The platform to return results for
 @channelName {string} The channel name to return results for
-@resultCount {number} The number of results to return*/
+@resultCount {number} The number of results to return
+@return {string} The path to request
+*/
 function getApiProgrammePerchannel2(target,platform,channelname,resultcount){
   var p = '/api/{target}/{platform}/Programme/PerChannel/{channelName}/{resultCount}';
   p = p.replace('{target}',target);
@@ -263,7 +306,9 @@ function getApiProgrammePerchannel2(target,platform,channelname,resultcount){
 /** Get Mercury Search AtoZ
 @target {string} Whether to return results in xml or json
 @platform {string} The platform to return results for
-@characterFilter {string} The initial character to filter by*/
+@characterFilter {string} The initial character to filter by
+@return {string} The path to request
+*/
 function getApiProgrammeSearchatoz(target,platform,characterfilter){
   var p = '/api/{target}/{platform}/Programme/SearchAtoZ/{characterFilter}';
   p = p.replace('{target}',target);
@@ -274,7 +319,9 @@ function getApiProgrammeSearchatoz(target,platform,characterfilter){
 
 /** Get Mercury Menu
 @target {string} Whether to return results in xml or json
-@platform {string} The platform to return results for*/
+@platform {string} The platform to return results for
+@return {string} The path to request
+*/
 function getApi(target,platform){
   var p = '/api/{target}/{platform}';
   p = p.replace('{target}',target);
@@ -284,7 +331,9 @@ function getApi(target,platform){
 
 /** Get Mercury image by programme id
 @platform {string} The platform to return results for
-@programmeId {string} The programme id to find by*/
+@programmeId {string} The programme id to find by
+@return {string} The path to request
+*/
 function getProgrammeImageJpg(platform,programmeid){
   var p = '/{platform}/programme/{programmeId}/image.jpg';
   p = p.replace('{platform}',platform);
@@ -293,21 +342,25 @@ function getProgrammeImageJpg(platform,programmeid){
 }
 
 /** Get Mercury image by production id
-@platform {string} The platform to return results for*/
+@platform {string} The platform to return results for
+@return {string} The path to request
+*/
 function getProductionImage(platform){
   var p = '/{platform}/production/image';
   p = p.replace('{platform}',platform);
   return p;
 }
-/* Quality */
+/** Quality */
 const getProductionImageQuality = 'quality';
-/* The image format to return */
+/** The image format to return */
 const getProductionImageFormat = 'format';
-/* The production id to find by */
+/** The production id to find by */
 const getProductionImageProductionid = 'productionId';
 
 /** Get Mercury BBC Interlinking
-@yyyymmdd {string} The date to retrieve interlinking data for*/
+@yyyymmdd {string} The date to retrieve interlinking data for
+@return {string} The path to request
+*/
 function getLinking(yyyymmdd){
   var p = '/linking/{yyyymmdd}';
   p = p.replace('{yyyymmdd}',yyyymmdd);
@@ -316,7 +369,9 @@ function getLinking(yyyymmdd){
 
 /** Get Mercury carousel
 @target {string} Whether to return results in xml or json
-@platform {string} The platform to return results for*/
+@platform {string} The platform to return results for
+@return {string} The path to request
+*/
 function getApiEpisodeCarousel(target,platform){
   var p = '/api/{target}/{platform}/Episode/Carousel';
   p = p.replace('{target}',target);
@@ -326,7 +381,9 @@ function getApiEpisodeCarousel(target,platform){
 
 /** Get Mercury image by episodeId
 @platform {string} The platform to return results for
-@episodeId {string} The episode id to find by*/
+@episodeId {string} The episode id to find by
+@return {string} The path to request
+*/
 function getEpisodeImageJpg(platform,episodeid){
   var p = '/{platform}/episode/{episodeId}/image.jpg';
   p = p.replace('{platform}',platform);
@@ -336,7 +393,9 @@ function getEpisodeImageJpg(platform,episodeid){
 
 /** Get Mercury Reverse Geocode
 @lat {number} Lattitude
-@long {number} Longitude*/
+@long {number} Longitude
+@return {string} The path to request
+*/
 function getApiGeoReversegeolookup(lat,long){
   var p = '/api/geo/reversegeolookup/{lat}/{long}';
   p = p.replace('{lat}',lat);
