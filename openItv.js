@@ -142,7 +142,7 @@ function getApiProgrammePerchannelAd2(target,platform,channelname){
 }
 
 /* Get Mercury error log digest*/
-const getErrorlogAspxDigestrss = '//errorlog.aspx/digestrss';
+const getErrorlogAspxDigestrss = '/errorlog.aspx/digestrss';
 
 /** Get Mercury episode/programme
 @target {string} Whether to return results in xml or json
@@ -179,7 +179,7 @@ function getApiWhatsonschedule(target,platform,date){
 }
 
 /* Get Mercury error log download*/
-const getErrorlogAspxDownload = '//errorlog.aspx/download';
+const getErrorlogAspxDownload = '/errorlog.aspx/download';
 
 /** Get Mercury programme index
 @target {string} Whether to return results in xml or json
@@ -214,7 +214,7 @@ function getApiWhatsonscheduleYesterday(target,platform){
 }
 
 /* Get Mercury error log*/
-const getErrorlogAspxRss = '//errorlog.aspx/rss';
+const getErrorlogAspxRss = '/errorlog.aspx/rss';
 
 /** Get Mercury current schedule
 @target {string} Whether to return results in xml or json
