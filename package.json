@@ -1,6 +1,6 @@
 {
   "name": "openitv",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ITV Mercury API SDK",
   "main": "parseApi.js",
   "directories": {
