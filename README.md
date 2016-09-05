@@ -12,3 +12,5 @@ Contains
 [Flashheart](https://github.com/bbc/flashheart)
 
 #### For reference data and examples, please consult the [Wiki](https://github.com/Mermade/openItv/wiki)
+
+Generated [JSDoc](https://doclets.io/Mermade/openItv/master) courtesy of [doclets.io](http://doclets.io)
