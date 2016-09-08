@@ -164,7 +164,7 @@ function getApiProgrammePerchannelAd2(target,platform,channelname){
   return p;
 }
 
-/* Get Mercury error log digest*/
+/** Get Mercury error log digest*/
 const getErrorlogAspxDigestrss = '/errorlog.aspx/digestrss';
 
 /** Get Mercury episode/programme
@@ -207,7 +207,7 @@ function getApiWhatsonschedule(target,platform,date){
   return p;
 }
 
-/* Get Mercury error log download*/
+/** Get Mercury error log download*/
 const getErrorlogAspxDownload = '/errorlog.aspx/download';
 
 /** Get Mercury programme index
@@ -248,7 +248,7 @@ function getApiWhatsonscheduleYesterday(target,platform){
   return p;
 }
 
-/* Get Mercury error log*/
+/** Get Mercury error log*/
 const getErrorlogAspxRss = '/errorlog.aspx/rss';
 
 /** Get Mercury current schedule
