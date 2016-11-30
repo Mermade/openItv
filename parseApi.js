@@ -1,16 +1,16 @@
 /* openItv parseApi.js */
 
 var path = require('path');
-var validator = require('is-my-json-valid');
+var ajv = require('ajv')();
 var oa2js = require('openapi2js');
 
 var swaggerSchema = require(path.resolve('./validation/swagger2Schema.json'));
-var swagger = require(path.resolve('./swagger.json'));
+var mercury = require(path.resolve('./mercury/swagger.json'));
 
 console.log('Validating swagger spec...');
-var validate = validator(swaggerSchema);
-validate(swagger,{
-	greedy: true,
+var validate = ajv.compile(swaggerSchema);
+validate(mercury,{
+	allErrors: true,
 	verbose: true
 });
 var errors = validate.errors;
@@ -19,6 +19,6 @@ if (errors) {
 }
 else {
     console.log('Valid swagger 2.0');
-    console.log('Creating openItv.js API');
-    oa2js.openAPI2js('./swagger.json','./openItv.js');
+    console.log('Creating itvMercury.js API');
+    oa2js.openAPI2js('./mercury/swagger.json','./mercury/itvMercury.js');
 }

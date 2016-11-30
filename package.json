@@ -20,7 +20,7 @@
     "mercury"
   ],
   "dependencies": {
-    "is-my-json-valid": "latest",
+    "ajv": "^4.8.2",
     "openapi2js": "latest"
   },
   "author": "Mike Ralphson",
