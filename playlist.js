@@ -36,7 +36,7 @@ if (process.argv.length > 3) {
 	options.headers.hmac = generate_hmac_token(prodId, platform);
 	options.headers['Content-Type'] = 'application/json';
 
-	//prodId = prodId.split('/').join('_').split('#').join('.');
+	prodId = prodId.split('/').join('-').split('#').join('_');
 
 	options.path = '/playlist/itvonline/samsung/'+prodId;
 	options.host = 'old-origin-api.itv.com';
