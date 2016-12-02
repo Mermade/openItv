@@ -56,15 +56,22 @@ if (process.argv.length > 3) {
 		res.on('error',function(err){
 		});
 		res.on('end',function(){
+			console.log(res.statusCode+' '+res.statusMessage);
+			console.log(JSON.stringify(res.headers,null,2));
 			try {
 				var obj = JSON.parse(data);
 				console.log(JSON.stringify(obj,null,2));
+				console.log();
+				console.log(obj.Playlist.Video.Base+obj.Playlist.Video.MediaFiles[0].Href);
+				console.log();
+				console.log('ffmpeg -protocol_whitelist crypto -i {infile] {outfile}');
 			}
 			catch (ex) {
-			  console.log(data);
+				console.log(ex.message);
+				console.log(data);
 			}
-			console.log(JSON.stringify(res.headers,null,2));
-			console.log(res.statusCode+' '+res.statusMessage);
+
+			//console.log('./ffmpeg.exe -protocol_whitelist file,http,https,tcp,tls,crypto -i https://itvandroidhls-vh.akamaihd.net/i/priority/Catchup/1/9855/0061/001/1-9855-0061-001_Almost-Naked-Animals--Series-2-_TX271116_BL,300,400,600,800,1200,_16X9.mp4.csmil/master.m3u8?hdnea=st=1480685195~exp=1480771595~acl=/*~hmac=e09522cf4a800cd23b863a1f0cdab11a5f17e22e2e64c817d5d0c7ef91cfd831 ~/test.ts');
 		});
 	});
 
