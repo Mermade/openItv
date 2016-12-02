@@ -1,5 +1,6 @@
 var crypto = require('crypto');
 var http = require('http');
+var https = require('https');
 
 function sha1(s) {
 	var shasum = crypto.createHash('sha1');
@@ -19,10 +20,15 @@ var sharedKey = {
 
 function generate_hmac_token(productionId, platform) {
 	console.log(platform);
-	var prodId = productionId.split('/').join('-').split('#').join('_');
+	console.log(productionId);
+	//var prodId = productionId.split('_').join('/').split('.').join('#');
+	var prodId = productionId.split('_').join('/').split('.').join('#');
+	//var prodId = productionId;
 	console.log(prodId);
-	console.log('salt:'+sharedKey[platform]);
-	var saltedHash = sharedKey[platform] + prodId;
+	var salt = sharedKey[platform];
+	if (!salt) salt = '';
+	console.log('salt:'+salt);
+	var saltedHash = salt + prodId;
 	return sha1(saltedHash).toUpperCase();
 }
 
@@ -36,14 +42,13 @@ if (process.argv.length > 3) {
 	options.headers.hmac = generate_hmac_token(prodId, platform);
 	options.headers['Content-Type'] = 'application/json';
 
-	prodId = prodId.split('/').join('-').split('#').join('_');
-
-	options.path = '/playlist/itvonline/samsung/'+prodId;
+	prodId = prodId.split('/').join('_').split('#').join('.');
+	options.path = '/playlist/itvonline/'+(platform.toLowerCase())+'/'+prodId;
 	options.host = 'old-origin-api.itv.com';
 
 	console.log(options.headers.hmac);
 
-	http.get(options,function(res){
+	https.get(options,function(res){
 		var data = '';
 		res.on('data',function(chunk){
 			data += chunk;
@@ -51,7 +56,13 @@ if (process.argv.length > 3) {
 		res.on('error',function(err){
 		});
 		res.on('end',function(){
-			console.log(data);
+			try {
+				var obj = JSON.parse(data);
+				console.log(JSON.stringify(obj,null,2));
+			}
+			catch (ex) {
+			  console.log(data);
+			}
 			console.log(JSON.stringify(res.headers,null,2));
 			console.log(res.statusCode+' '+res.statusMessage);
 		});
@@ -60,4 +71,6 @@ if (process.argv.length > 3) {
 }
 else {
 	console.log('Usage: playlist {platform} {productionId}');
+	console.log('e.g. : playlist Samsung 1_9855_0061.001');
+	console.log('or   : playlist Samsung 1/9855/0061#001');
 }
