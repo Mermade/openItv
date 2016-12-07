@@ -81,4 +81,5 @@ else {
 	console.log('Usage: playlist {platform} {productionId}');
 	console.log('e.g. : playlist Samsung 1_9855_0061.001');
 	console.log('or   : playlist Samsung 1/9855/0061#001');
+	console.log('or   : playlist Android {channel}');
 }
